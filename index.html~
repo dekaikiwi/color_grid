@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script defer src="app.js"></script>
+  <style>
+    .block {
+    }
+
+    .row {
+      width: 100%;
+      display: inline-block;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

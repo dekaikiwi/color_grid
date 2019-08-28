@@ -9,8 +9,8 @@ const DEFAULT_COLORS = [
 url = new URL(window.location.href)
 userSetColumns = url.searchParams.get('numCol')
 userSetExtraColors = url.searchParams.get('extraColors')
-
-const COLORS = DEFAULT_COLORS.concat(userSetExtraColors.replace(/\!/g, '#').split(','))
+extraColors = (userSetExtraColors == null) ? [] :  userSetExtraColors.replace(/\!/g, '#').split(',')
+const COLORS = DEFAULT_COLORS.concat(extraColors)
 
 const SQUARES_PER_LINE= parseInt(userSetColumns) || 5
 const WIDTH=window.innerWidth / SQUARES_PER_LINE
